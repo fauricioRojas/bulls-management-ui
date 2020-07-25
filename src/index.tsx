@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+
+import 'font-awesome/css/font-awesome.min.css';
+import { App } from './modules/app/app';
 import * as serviceWorker from './serviceWorker';
+import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <StrictMode>
+    <CustomThemeProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </CustomThemeProvider>
+  </StrictMode>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
