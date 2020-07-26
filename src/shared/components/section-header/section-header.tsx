@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 
-import { useStyles } from './section-header.style';
+import { Typography } from '../typography/typography';
 
 interface ISectionHeaderProps {
   title: string;
 }
 
-export const SectionHeader: FC<ISectionHeaderProps> = ({ title }) => {
-  const { root } = useStyles();
-
-  return <div className={root}>{title}</div>;
-};
+export const SectionHeader: FC<ISectionHeaderProps> = ({ title }) => (
+  <Typography type="title" bold={true}>
+    {title}
+  </Typography>
+);

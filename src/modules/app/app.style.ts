@@ -8,6 +8,7 @@ export const useStyles = createUseStyles(
       minHeight: '100vh',
       transition: 'background-color .3s',
       backgroundColor: BODY_BACKGROUND_COLOR,
+      paddingTop: 40,
       paddingBottom: 60,
     },
     '@global': {

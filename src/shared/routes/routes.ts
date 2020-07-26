@@ -1,8 +1,9 @@
 import { ComponentType } from 'react';
 
-import { Config } from '../../modules/config/config';
+import { Bulls } from '../../modules/bulls/bulls';
 import { Dashboard } from '../../modules/dashboard/dashboard';
 import { Expenses } from '../../modules/expenses/expenses';
+import { Settings } from '../../modules/settings/settings';
 import { BASE_ROUTES } from './routes.constants';
 
 export interface IRoute {
@@ -21,9 +22,14 @@ export const authRoutes: IAppRoutes = {
     component: Dashboard,
     exact: true,
   },
-  config: {
-    path: BASE_ROUTES.CONFIG,
-    component: Config,
+  bulls: {
+    path: BASE_ROUTES.BULLS,
+    component: Bulls,
+    exact: true,
+  },
+  settings: {
+    path: BASE_ROUTES.SETTINGS,
+    component: Settings,
     exact: true,
   },
   expenses: {
