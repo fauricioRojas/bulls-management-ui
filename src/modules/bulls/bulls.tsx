@@ -1,6 +1,7 @@
 import React, { useState, FC } from 'react';
 
 import { Header } from '../../shared/components/header/header';
+import { InputSliderWrapper } from '../../shared/components/input-slider-wrapper/input-slider-wrapper';
 import { SectionHeader } from '../../shared/components/section-header/section-header';
 import { Wrapper } from '../../shared/components/wrapper/wrapper';
 import { useStyles } from './bulls.style';
@@ -17,7 +18,13 @@ export const Bulls: FC = () => {
     <Wrapper className={root}>
       <Header title="Bulls" onClickAdd={toggleIsBullLotFormVisible} />
       <SectionHeader title="Bulls" />
-      <BullLotForm isVisible={isBullLotFormVisible} onCancel={toggleIsBullLotFormVisible} />
+      <InputSliderWrapper
+        title="New Bull Lot"
+        isVisible={isBullLotFormVisible}
+        onCancel={toggleIsBullLotFormVisible}
+      >
+        <BullLotForm />
+      </InputSliderWrapper>
     </Wrapper>
   );
 };

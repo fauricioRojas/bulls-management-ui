@@ -17,6 +17,7 @@ export const useStyles = createUseStyles(
       alignItems: 'center',
       justifyContent: 'space-between',
       backgroundColor: BODY_BACKGROUND_COLOR,
+      transition: 'background-color .3s',
       '&.background': {
         backgroundColor: NAVBAR_BACKGROUND_COLOR,
       },

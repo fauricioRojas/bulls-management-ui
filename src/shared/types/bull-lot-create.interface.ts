@@ -1,4 +1,4 @@
-export interface IBullLotForm {
+export interface IBullLotCreate {
   amount: number;
   purchasePrice: number;
 }

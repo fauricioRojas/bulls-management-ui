@@ -1,6 +1,6 @@
-import { IBullLotForm } from './bull-lot-form.interface';
+import { IBullLotCreate } from '../../../../../shared/types/bull-lot-create.interface';
 
-export const bullLotFormInitialValues: IBullLotForm = {
+export const bullLotFormInitialValues: IBullLotCreate = {
   amount: 0,
   purchasePrice: 0,
 };

@@ -3,15 +3,15 @@ import React, { FC } from 'react';
 
 import Button from '../button/button';
 import { Typography } from '../typography/typography';
-import { useStyles } from './sliding-wrapper.style';
+import { useStyles } from './input-slider-wrapper.style';
 
-interface ISlidingWrapperProps {
+interface IInputSliderWrapperProps {
   title: string;
   isVisible: boolean;
   onCancel: () => void;
 }
 
-export const SlidingWrapper: FC<ISlidingWrapperProps> = ({
+export const InputSliderWrapper: FC<IInputSliderWrapperProps> = ({
   title,
   isVisible,
   onCancel,
@@ -29,7 +29,7 @@ export const SlidingWrapper: FC<ISlidingWrapperProps> = ({
           Cancel
         </Button>
       </div>
-      {children}
+      <div className="body">{children}</div>
     </div>
   );
 };

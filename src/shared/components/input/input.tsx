@@ -23,7 +23,7 @@ export const Input: FC<IInputProps> = ({ touched, errorMessage, ...props }) => {
 
   return (
     <div className={classNames(root, { 'has-error': hasError })}>
-      <input {...props} />
+      <input {...props} autoComplete="off" />
       <ErrorMessage show={hasError}>{errorMessage}</ErrorMessage>
     </div>
   );

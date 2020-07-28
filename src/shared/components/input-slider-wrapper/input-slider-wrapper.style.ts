@@ -9,22 +9,26 @@ export const useStyles = createUseStyles(
   }: ITheme) => ({
     root: {
       backgroundColor: BODY_BACKGROUND_COLOR,
-      transform: 'translate(100vw, -93px) rotateY(90deg)',
-      transition: 'transform .4s ease',
-      zIndex: 10,
+      transform: 'translateX(100vw)',
+      transition: 'transform .3s ease',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
       '& > .header': {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: NAVBAR_BACKGROUND_COLOR,
-        marginLeft: '-10px',
-        marginTop: '-11px',
-        width: '100vw',
+        height: 52,
         padding: `${PADDING_1} ${PADDING_2}`,
         marginBottom: MARGIN_3,
       },
+      '& > .body': {
+        padding: PADDING_2,
+      },
       '&.is-visible': {
-        transform: 'translate(0, -93px)',
+        transform: 'translateX(0)',
       },
     },
   }),
