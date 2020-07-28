@@ -3,13 +3,16 @@ import { createUseStyles } from 'react-jss';
 import { ITheme } from '../../shared/style/theming/theme';
 
 export const useStyles = createUseStyles(
-  ({ COLORS: { BODY_BACKGROUND_COLOR }, GUTTERS: { PADDING_0, MARGIN_0 } }: ITheme) => ({
+  ({
+    COLORS: { BODY_BACKGROUND_COLOR },
+    GUTTERS: { PADDING_0, PADDING_8, PADDING_12, MARGIN_0 },
+  }: ITheme) => ({
     root: {
       minHeight: '100vh',
       transition: 'background-color .3s',
       backgroundColor: BODY_BACKGROUND_COLOR,
-      paddingTop: 40,
-      paddingBottom: 60,
+      paddingTop: PADDING_8,
+      paddingBottom: PADDING_12,
     },
     '@global': {
       '*': {

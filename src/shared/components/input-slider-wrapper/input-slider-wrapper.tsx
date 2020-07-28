@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 
-import Button from '../button/button';
+import { Button } from '../button/button';
 import { Typography } from '../typography/typography';
 import { useStyles } from './input-slider-wrapper.style';
 

@@ -8,6 +8,8 @@ export interface IGutters {
   PADDING_3: string;
   PADDING_4: string;
   PADDING_5: string;
+  PADDING_8: string;
+  PADDING_12: string;
   MARGIN_0: string;
   MARGIN_1: string;
   MARGIN_2: string;
@@ -30,6 +32,8 @@ export const GUTTERS: IGutters = {
   PADDING_3: '15px',
   PADDING_4: '20px',
   PADDING_5: '25px',
+  PADDING_8: '40px',
+  PADDING_12: '60px',
   // marging
   MARGIN_0: '0px',
   MARGIN_1: '8px',

@@ -12,7 +12,7 @@ export interface IButtonProps {
   disabled?: boolean;
 }
 
-const Button: FC<IButtonProps> = ({
+export const Button: FC<IButtonProps> = ({
   variant,
   children,
   onClick,
@@ -34,5 +34,3 @@ const Button: FC<IButtonProps> = ({
     </button>
   );
 };
-
-export default Button;

@@ -1,6 +1,6 @@
 import React, { useContext, FC } from 'react';
 
-import Button from '../../shared/components/button/button';
+import { Button } from '../../shared/components/button/button';
 import { Header } from '../../shared/components/header/header';
 import { SectionHeader } from '../../shared/components/section-header/section-header';
 import { Wrapper } from '../../shared/components/wrapper/wrapper';

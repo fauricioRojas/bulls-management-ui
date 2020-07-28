@@ -1,10 +1,9 @@
 import { useFormik } from 'formik';
 import React, { FC } from 'react';
 
-import { Form } from '../../../../shared/components/form/form';
-
-import Button from '../../../../shared/components/button/button';
+import { Button } from '../../../../shared/components/button/button';
 import { FormRow } from '../../../../shared/components/form-row/form-row';
+import { Form } from '../../../../shared/components/form/form';
 import { Input } from '../../../../shared/components/input/input';
 import { bullLotService } from '../../../../shared/services/bull-lot/bull-lot.service';
 import { useStyles } from './bull-lot-form.style';
