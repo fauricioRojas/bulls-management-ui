@@ -4,14 +4,15 @@ import { ITheme } from '../../shared/style/theming/theme';
 
 export const useStyles = createUseStyles(
   ({
-    COLORS: { BODY_BACKGROUND_COLOR },
-    GUTTERS: { PADDING_0, PADDING_8, PADDING_12, MARGIN_0 },
+    COLORS: { BODY_BACKGROUND_COLOR, PRIMARY_TEXT_COLOR },
+    GUTTERS: { PADDING_0, PADDING_12, MARGIN_0 },
   }: ITheme) => ({
     root: {
       minHeight: '100vh',
       transition: 'background-color .3s',
       backgroundColor: BODY_BACKGROUND_COLOR,
-      paddingTop: PADDING_8,
+      color: PRIMARY_TEXT_COLOR,
+      paddingTop: 52,
       paddingBottom: PADDING_12,
     },
     '@global': {

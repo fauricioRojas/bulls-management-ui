@@ -25,7 +25,7 @@ export const InputSliderWrapper: FC<IInputSliderWrapperProps> = ({
         <Typography type="label" bold={true}>
           {title}
         </Typography>
-        <Button variant="primary-text" size="large" onClick={onCancel}>
+        <Button variant="primary-text" onClick={onCancel}>
           Cancel
         </Button>
       </div>

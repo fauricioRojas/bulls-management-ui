@@ -1,8 +1,6 @@
 import React, { useState, FC } from 'react';
 
-import { Header } from '../../shared/components/header/header';
 import { InputSliderWrapper } from '../../shared/components/input-slider-wrapper/input-slider-wrapper';
-import { SectionHeader } from '../../shared/components/section-header/section-header';
 import { Wrapper } from '../../shared/components/wrapper/wrapper';
 import { useStyles } from './bulls.style';
 import { BullLotForm } from './components/bull-lot-form/bull-lot-form';
@@ -15,9 +13,7 @@ export const Bulls: FC = () => {
     setIsBullLotFormVisible(prevIsBullLotFormVisible => !prevIsBullLotFormVisible);
 
   return (
-    <Wrapper className={root}>
-      <Header title="Bulls" onClickAdd={toggleIsBullLotFormVisible} />
-      <SectionHeader title="Bulls" />
+    <Wrapper className={root} title="Bulls" onClickAdd={toggleIsBullLotFormVisible}>
       <InputSliderWrapper
         title="New Bull Lot"
         isVisible={isBullLotFormVisible}

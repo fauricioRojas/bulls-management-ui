@@ -34,6 +34,8 @@ export const useStyles = createUseStyles(
         padding: PADDING_0,
         fontWeight: REGULAR,
         letterSpacing: LETTER_SPACING,
+        fontSize: '1rem',
+        height: 'auto',
       },
       '&.full-width': {
         width: '100%',
