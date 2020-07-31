@@ -16,7 +16,7 @@ export const NavbarItem: FC<INavbarItemProps> = ({ iconClass, text, to }) => {
   return (
     <Link className={classNames(root, { active: to === pathname })} to={to}>
       <Icon iconClass={iconClass} size="large" />
-      <Typography type="caption" bold={true}>
+      <Typography variant="caption" bold={true}>
         {text}
       </Typography>
     </Link>

@@ -5,6 +5,7 @@ import { Button } from '../../../../shared/components/button/button';
 import { FormRow } from '../../../../shared/components/form-row/form-row';
 import { Form } from '../../../../shared/components/form/form';
 import { Input } from '../../../../shared/components/input/input';
+import { useBullLotContext } from '../../../../shared/context/bull-lot/bull-lot.context';
 import { bullLotService } from '../../../../shared/services/bull-lot/bull-lot.service';
 import { useStyles } from './bull-lot-form.style';
 import { bullLotFormInitialValues } from './utils/bull-lot-form-initial-values';
@@ -12,13 +13,14 @@ import { bullLotFormSchema } from './utils/bull-lot-form.schema';
 
 export const BullLotForm: FC = () => {
   const { root } = useStyles();
+  const { pushBullLot } = useBullLotContext();
   const { handleSubmit, handleChange, values, touched, errors } = useFormik({
     initialValues: bullLotFormInitialValues,
     validationSchema: bullLotFormSchema,
     onSubmit: async bullLotValues => {
       try {
         const newBullLot = await bullLotService.createBullLot(bullLotValues);
-        console.log('newBullLot:', newBullLot);
+        pushBullLot(newBullLot);
       } catch (err) {
         console.log('err:', err);
       }

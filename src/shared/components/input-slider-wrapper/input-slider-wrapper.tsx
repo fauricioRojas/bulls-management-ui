@@ -22,14 +22,14 @@ export const InputSliderWrapper: FC<IInputSliderWrapperProps> = ({
   return (
     <div className={classNames(root, { 'is-visible': isVisible })}>
       <div className="header">
-        <Typography type="label" bold={true}>
+        <Typography variant="label" bold={true}>
           {title}
         </Typography>
         <Button variant="primary-text" onClick={onCancel}>
           Cancel
         </Button>
       </div>
-      <div className="body">{children}</div>
+      <div className="body">{isVisible && children}</div>
     </div>
   );
 };

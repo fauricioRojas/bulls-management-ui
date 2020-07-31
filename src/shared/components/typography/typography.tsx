@@ -4,7 +4,7 @@ import React, { useMemo, FC } from 'react';
 import { useStyles } from './typography.style';
 
 export interface ITypographyProps {
-  type: 'title' | 'label' | 'caption';
+  variant: 'title' | 'label' | 'caption';
   bold?: boolean;
   italic?: boolean;
 }
@@ -15,10 +15,10 @@ const defaultTypeMapping: { [key: string]: keyof JSX.IntrinsicElements } = {
   caption: 'span',
 };
 
-export const Typography: FC<ITypographyProps> = ({ type, bold, italic, children }) => {
+export const Typography: FC<ITypographyProps> = ({ variant, bold, italic, children }) => {
   const { root } = useStyles();
 
-  const Element = useMemo(() => defaultTypeMapping[type] || 'span', [type]);
+  const Element = useMemo(() => defaultTypeMapping[variant] || 'span', [variant]);
 
-  return <Element className={classNames([root, type], { italic, bold })}>{children}</Element>;
+  return <Element className={classNames([root, variant], { italic, bold })}>{children}</Element>;
 };

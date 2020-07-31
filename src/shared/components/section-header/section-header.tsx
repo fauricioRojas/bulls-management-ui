@@ -7,7 +7,7 @@ interface ISectionHeaderProps {
 }
 
 export const SectionHeader: FC<ISectionHeaderProps> = ({ title }) => (
-  <Typography type="title" bold={true}>
+  <Typography variant="title" bold={true}>
     {title}
   </Typography>
 );

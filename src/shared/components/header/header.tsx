@@ -17,9 +17,7 @@ export const Header: FC<IHeaderProps> = ({ title, onClickAdd }) => {
   const { root } = useStyles();
   const [showTitle, setShowTitle] = useState(window.scrollY >= SCROLL_Y);
 
-  const handleScroll = useCallback(() => {
-    setShowTitle(window.scrollY >= SCROLL_Y);
-  }, []);
+  const handleScroll = useCallback(() => setShowTitle(window.scrollY >= SCROLL_Y), []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +33,7 @@ export const Header: FC<IHeaderProps> = ({ title, onClickAdd }) => {
       <div />
       {showTitle && (
         <div>
-          <Typography type="label" bold={true}>
+          <Typography variant="label" bold={true}>
             {title}
           </Typography>
         </div>

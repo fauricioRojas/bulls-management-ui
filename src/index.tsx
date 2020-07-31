@@ -5,13 +5,16 @@ import { BrowserRouter } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import { App } from './modules/app/app';
 import * as serviceWorker from './serviceWorker';
+import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
 import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
 
 ReactDOM.render(
   <StrictMode>
     <CustomThemeProvider>
       <BrowserRouter>
-        <App />
+        <BullLotProvider>
+          <App />
+        </BullLotProvider>
       </BrowserRouter>
     </CustomThemeProvider>
   </StrictMode>,

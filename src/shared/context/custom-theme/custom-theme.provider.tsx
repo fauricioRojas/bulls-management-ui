@@ -19,18 +19,16 @@ export const CustomThemeProvider: FC = ({ children }) => {
     theme: localStorageService.get<boolean>(THEME_KEY) ? DARK_THEME : LIGHT_THEME,
   });
 
-  const toggleTheme = useCallback(() => {
-    setState(prevState => ({
-      isDarkTheme: !prevState.isDarkTheme,
-      theme: prevState.isDarkTheme ? DARK_THEME : LIGHT_THEME,
-    }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const toggleTheme = useCallback(
+    () =>
+      setState(prevState => ({
+        isDarkTheme: !prevState.isDarkTheme,
+        theme: prevState.isDarkTheme ? DARK_THEME : LIGHT_THEME,
+      })),
+    [],
+  );
 
-  useDidUpdate(() => {
-    localStorageService.set(THEME_KEY, !isDarkTheme);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDarkTheme]);
+  useDidUpdate(() => localStorageService.set(THEME_KEY, !isDarkTheme), [isDarkTheme]);
 
   return (
     <ThemeProvider theme={theme}>

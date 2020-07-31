@@ -14,7 +14,7 @@ export const FormRow: FC<IFormRowProps> = ({ label, required, children, align = 
 
   return (
     <section className={`${root} ${align}-align`}>
-      <Typography type="label" bold={true}>
+      <Typography variant="label" bold={true}>
         {required && <span>*&nbsp;</span>}
         {label}
       </Typography>

@@ -5,3 +5,16 @@ export const uuidv4 = () => {
     return v.toString(16);
   });
 };
+
+export const dateFormatter = (timestamp: number): string => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const date = new Date(timestamp);
+  return new Intl.DateTimeFormat('es', options).format(date);
+};
+
+const formatter = new Intl.NumberFormat('es-CR', {
+  style: 'currency',
+  currency: 'COL',
+  minimumFractionDigits: 0,
+});
+export const moneyFormatter = (money: number) => formatter.format(money).replace('COL', '₡');

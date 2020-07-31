@@ -4,7 +4,7 @@ import { ITheme } from '../../style/theming/theme';
 
 export const useStyles = createUseStyles(
   ({
-    GUTTERS: { MARGIN_2 },
+    GUTTERS: { MARGIN_3 },
     FONT_WEIGHTS: { BOLD },
     COLORS: { PRIMARY_TEXT_COLOR, SECONDARY_TEXT_COLOR },
   }: ITheme) => ({
@@ -13,7 +13,7 @@ export const useStyles = createUseStyles(
         display: 'block',
         fontSize: '2rem',
         color: SECONDARY_TEXT_COLOR,
-        marginBottom: MARGIN_2,
+        marginBottom: MARGIN_3,
       },
       '&.label': {
         fontSize: '1rem',
