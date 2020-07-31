@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useState, FC } from 'react';
 
-import { ADD } from '../../constants/icons.constants';
+import { PLUS } from '../../constants/icons.constants';
 import { Icon } from '../icon/icon';
 import { Typography } from '../typography/typography';
 import { useStyles } from './header.style';
@@ -39,7 +39,7 @@ export const Header: FC<IHeaderProps> = ({ title, onClickAdd }) => {
         </div>
       )}
       <div>
-        {onClickAdd && <Icon iconClass={ADD} type="primary" size="large" onClick={onClickAdd} />}
+        {onClickAdd && <Icon iconClass={PLUS} type="primary" size="large" onClick={onClickAdd} />}
       </div>
     </header>
   );

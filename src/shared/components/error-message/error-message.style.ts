@@ -6,9 +6,10 @@ export const useStyles = createUseStyles(({ COLORS: { ERROR_COLOR } }: ITheme) =
   root: {
     color: ERROR_COLOR,
     fontSize: '0.9rem',
-    animation: '$slide-down 0.4s ease',
+    animation: '$fade-in 0.4s ease',
+    '-webkit-animation': '$fade-in 0.4s ease',
   },
-  '@keyframes slide-down': {
+  '@keyframes fade-in': {
     '0%': {
       opacity: 0,
       transform: 'translateY(-10px)',
@@ -18,7 +19,7 @@ export const useStyles = createUseStyles(({ COLORS: { ERROR_COLOR } }: ITheme) =
       transform: 'translateY(0)',
     },
   },
-  '@-webkit-keyframes slide-down': {
+  '@-webkit-keyframes fade-in': {
     '0%': {
       opacity: 0,
       transform: 'translateY(-10px)',

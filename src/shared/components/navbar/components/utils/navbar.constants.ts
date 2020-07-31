@@ -1,4 +1,4 @@
-import { BULLS, DASHBOARD, EXPENSES, SETTINGS } from '../../../../constants/icons.constants';
+import { COGS, DASHBOARD, DOLLAR, SHOPPING_BASKET } from '../../../../constants/icons.constants';
 import { BASE_ROUTES } from '../../../../routes/routes.constants';
 import { INavbarItem } from '../navbar-item/interfaces/navbar-item.interface';
 
@@ -9,17 +9,17 @@ export const NAVBAR_ITEMS: INavbarItem[] = [
     to: BASE_ROUTES.DASHBOARD,
   },
   {
-    iconClass: BULLS,
+    iconClass: SHOPPING_BASKET,
     text: 'Bulls',
     to: BASE_ROUTES.BULLS,
   },
   {
-    iconClass: EXPENSES,
+    iconClass: DOLLAR,
     text: 'Expenses',
     to: BASE_ROUTES.EXPENSES,
   },
   {
-    iconClass: SETTINGS,
+    iconClass: COGS,
     text: 'Settings',
     to: BASE_ROUTES.SETTINGS,
   },

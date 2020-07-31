@@ -1,5 +1,9 @@
-export const SETTINGS = 'fa fa-cogs';
+export const COGS = 'fa fa-cogs';
 export const DASHBOARD = 'fa fa-th-large';
-export const EXPENSES = 'fa fa-usd';
-export const ADD = 'fa fa-plus';
-export const BULLS = 'fa fa-shopping-basket';
+export const DOLLAR = 'fa fa-usd';
+export const PLUS = 'fa fa-plus';
+export const SHOPPING_BASKET = 'fa fa-shopping-basket';
+export const CHECK_CIRCLE = 'fa fa-check-circle';
+export const TIMES_CIRCLE = 'fa fa-times-circle';
+export const EXCLAMATION_CIRCLE = 'fa fa-exclamation-circle';
+export const INFO_CIRCLE = 'fa fa-info-circle';

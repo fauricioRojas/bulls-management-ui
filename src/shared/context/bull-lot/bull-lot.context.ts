@@ -15,4 +15,4 @@ export const BullLotContext = createContext<IBullLotContext>({
   pushBullLot: () => undefined,
 });
 
-export const useBullLotContext = () => useContext(BullLotContext);
+export const useBullLot = () => useContext(BullLotContext);

@@ -7,14 +7,17 @@ import { App } from './modules/app/app';
 import * as serviceWorker from './serviceWorker';
 import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
 import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
+import { SnackbarProvider } from './shared/context/snackbar/snackbar.provider';
 
 ReactDOM.render(
   <StrictMode>
     <CustomThemeProvider>
       <BrowserRouter>
-        <BullLotProvider>
-          <App />
-        </BullLotProvider>
+        <SnackbarProvider>
+          <BullLotProvider>
+            <App />
+          </BullLotProvider>
+        </SnackbarProvider>
       </BrowserRouter>
     </CustomThemeProvider>
   </StrictMode>,

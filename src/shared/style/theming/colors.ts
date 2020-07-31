@@ -8,6 +8,7 @@ export interface IColors {
   BORDER_COLOR: string;
   INPUT_BACKGROUND_COLOR: string;
   SKELETON_COLOR: string;
+  SNACKBAR_COLOR: string;
   WHITE_COLOR: string;
   SUCCESS_COLOR: string;
   ERROR_COLOR: string;
@@ -30,6 +31,7 @@ export const DARK_COLORS: IColors = {
   BORDER_COLOR: '#3E4042',
   INPUT_BACKGROUND_COLOR: '#3A3B3C',
   SKELETON_COLOR: '#1F1E1E',
+  SNACKBAR_COLOR: '#3A3B3C',
 };
 
 export const LIGHT_COLORS: IColors = {
@@ -42,4 +44,5 @@ export const LIGHT_COLORS: IColors = {
   BORDER_COLOR: '#CED0D4',
   INPUT_BACKGROUND_COLOR: '#E4E6EB',
   SKELETON_COLOR: '#CECECE',
+  SNACKBAR_COLOR: '#FFF',
 };
