@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react';
 
 import { ISnackbarArgs } from './interfaces/snackbar.interface';
 
-export interface ISnackbarContext {
+interface ISnackbarContext {
   showSnackbar: (args: ISnackbarArgs) => void;
 }
 

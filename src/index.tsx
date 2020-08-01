@@ -7,6 +7,7 @@ import { App } from './modules/app/app';
 import * as serviceWorker from './serviceWorker';
 import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
 import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
+import { DrawerProvider } from './shared/context/drawer/drawer.provider';
 import { SnackbarProvider } from './shared/context/snackbar/snackbar.provider';
 
 ReactDOM.render(
@@ -14,9 +15,11 @@ ReactDOM.render(
     <CustomThemeProvider>
       <BrowserRouter>
         <SnackbarProvider>
-          <BullLotProvider>
-            <App />
-          </BullLotProvider>
+          <DrawerProvider>
+            <BullLotProvider>
+              <App />
+            </BullLotProvider>
+          </DrawerProvider>
         </SnackbarProvider>
       </BrowserRouter>
     </CustomThemeProvider>

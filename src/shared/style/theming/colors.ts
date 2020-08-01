@@ -12,6 +12,8 @@ export interface IColors {
   WHITE_COLOR: string;
   SUCCESS_COLOR: string;
   ERROR_COLOR: string;
+  WARNING_COLOR: string;
+  INFO_COLOR: string;
 }
 
 const COMMON_COLORS = {
@@ -19,6 +21,8 @@ const COMMON_COLORS = {
   SUCCESS_COLOR: '#31A24C',
   ERROR_COLOR: '#FC3930',
   WHITE_COLOR: '#FFF',
+  WARNING_COLOR: '#FC6E20',
+  INFO_COLOR: '#82D2EE',
 };
 
 export const DARK_COLORS: IColors = {

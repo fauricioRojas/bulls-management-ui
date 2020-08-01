@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 import { IBullLot } from '../../types/bull-lot.interface';
 
-export interface IBullLotContext {
+interface IBullLotContext {
   isLoading: boolean;
   bullLots: IBullLot[];
   getBullLots: () => void;

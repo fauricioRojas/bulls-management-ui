@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export interface ICustomThemeContext {
+interface ICustomThemeContext {
   toggleTheme: () => void;
 }
 

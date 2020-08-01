@@ -40,6 +40,7 @@ export const SnackbarProvider: FC = ({ children }) => {
 
   return (
     <SnackbarContext.Provider value={{ showSnackbar }}>
+      {children}
       {isVisible && (
         <div className={root}>
           <div className={`snackbar ${type}-snackbar`}>
@@ -48,7 +49,6 @@ export const SnackbarProvider: FC = ({ children }) => {
           </div>
         </div>
       )}
-      {children}
     </SnackbarContext.Provider>
   );
 };
