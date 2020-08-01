@@ -1,7 +1,6 @@
-import React, { useCallback, useState, FC } from 'react';
+import React, { useState, FC } from 'react';
 import { ThemeProvider } from 'react-jss';
 
-import { useDidUpdate } from '../../hooks/use-did-update/use-did-update';
 import { localStorageService } from '../../services/local-storage/local-storage.service';
 import { DARK_THEME, ITheme, LIGHT_THEME } from '../../style/theming/theme';
 import { CustomThemeContext } from './custom-theme.context';
@@ -15,24 +14,25 @@ const THEME_KEY = 'dark-theme';
 
 export const CustomThemeProvider: FC = ({ children }) => {
   const [{ isDarkTheme, theme }, setState] = useState<ICustomThemeState>({
-    isDarkTheme: false,
+    isDarkTheme: !!localStorageService.get<boolean>(THEME_KEY),
     theme: localStorageService.get<boolean>(THEME_KEY) ? DARK_THEME : LIGHT_THEME,
   });
 
-  const toggleTheme = useCallback(
-    () =>
-      setState(prevState => ({
+  const toggleTheme = () => {
+    setState(prevState => {
+      localStorageService.set(THEME_KEY, !isDarkTheme);
+      return {
         isDarkTheme: !prevState.isDarkTheme,
-        theme: prevState.isDarkTheme ? DARK_THEME : LIGHT_THEME,
-      })),
-    [],
-  );
-
-  useDidUpdate(() => localStorageService.set(THEME_KEY, !isDarkTheme), [isDarkTheme]);
+        theme: prevState.isDarkTheme ? LIGHT_THEME : DARK_THEME,
+      };
+    });
+  };
 
   return (
     <ThemeProvider theme={theme}>
-      <CustomThemeContext.Provider value={{ toggleTheme }}>{children}</CustomThemeContext.Provider>
+      <CustomThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+        {children}
+      </CustomThemeContext.Provider>
     </ThemeProvider>
   );
 };
