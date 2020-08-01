@@ -13,8 +13,10 @@ export const Bulls: FC = () => {
   const { showDrawer } = useDrawer();
   const { root } = useStyles();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => getBullLots(), []);
+  useEffect(() => {
+    getBullLots();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const showBullLotForm = useCallback(() => {
     showDrawer({

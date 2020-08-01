@@ -21,8 +21,10 @@ export const useStyles = createUseStyles(
       zIndex: 2,
       display: 'flex',
       justifyContent: 'center',
-      '-webkit-animation': '$fade-in 0.4s, $fade-out 0.5s 2.5s',
-      animation: '$fade-in 0.4s, $fade-out 0.5s 2.5s',
+      '-webkit-animation': (durationInSeconds: number) =>
+        `$fade-in 0.4s, $fade-out 0.5s ${durationInSeconds}s`,
+      animation: (durationInSeconds: number) =>
+        `$fade-in 0.4s, $fade-out 0.5s ${durationInSeconds}s`,
       '& > .snackbar': {
         backgroundColor: SNACKBAR_COLOR,
         boxShadow:

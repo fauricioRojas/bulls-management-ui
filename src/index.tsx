@@ -1,8 +1,8 @@
+import 'font-awesome/css/font-awesome.min.css';
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import 'font-awesome/css/font-awesome.min.css';
 import { App } from './modules/app/app';
 import * as serviceWorker from './serviceWorker';
 import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
@@ -14,13 +14,13 @@ ReactDOM.render(
   <StrictMode>
     <CustomThemeProvider>
       <BrowserRouter>
-        <SnackbarProvider>
-          <DrawerProvider>
-            <BullLotProvider>
+        <BullLotProvider>
+          <SnackbarProvider>
+            <DrawerProvider>
               <App />
-            </BullLotProvider>
-          </DrawerProvider>
-        </SnackbarProvider>
+            </DrawerProvider>
+          </SnackbarProvider>
+        </BullLotProvider>
       </BrowserRouter>
     </CustomThemeProvider>
   </StrictMode>,

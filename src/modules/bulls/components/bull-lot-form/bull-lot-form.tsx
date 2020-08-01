@@ -6,6 +6,7 @@ import { FormRow } from '../../../../shared/components/form-row/form-row';
 import { Form } from '../../../../shared/components/form/form';
 import { Input } from '../../../../shared/components/input/input';
 import { useBullLot } from '../../../../shared/context/bull-lot/bull-lot.context';
+import { useDrawer } from '../../../../shared/context/drawer/drawer.context';
 import { useSnackbar } from '../../../../shared/context/snackbar/snackbar.context';
 import { bullLotService } from '../../../../shared/services/bull-lot/bull-lot.service';
 import { useStyles } from './bull-lot-form.style';
@@ -16,6 +17,7 @@ export const BullLotForm: FC = () => {
   const { root } = useStyles();
   const { pushBullLot } = useBullLot();
   const { showSnackbar } = useSnackbar();
+  const { hideDrawer } = useDrawer();
   const { handleSubmit, handleChange, values, touched, errors } = useFormik({
     initialValues: bullLotFormInitialValues,
     validationSchema: bullLotFormSchema,
@@ -24,6 +26,7 @@ export const BullLotForm: FC = () => {
         const newBullLot = await bullLotService.createBullLot(bullLotValues);
         pushBullLot(newBullLot);
         showSnackbar({ type: 'success', body: 'Saved bull lot' });
+        hideDrawer();
       } catch {
         showSnackbar({ type: 'error', body: 'Not saved bull lot' });
       }

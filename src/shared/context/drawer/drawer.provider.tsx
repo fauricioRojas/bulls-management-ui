@@ -21,6 +21,8 @@ export const DrawerProvider: FC = ({ children }) => {
   const { root } = useStyles();
   const [{ isVisible, title, body }, setState] = useState<IDrawerState>(DEFAULT_DRAWER_STATE);
 
+  const resetState = useCallback(() => setState(DEFAULT_DRAWER_STATE), []);
+
   const hideDrawer = useCallback(() => {
     setState(prevState => ({
       ...prevState,
@@ -28,10 +30,6 @@ export const DrawerProvider: FC = ({ children }) => {
     }));
     setTimeout(resetState, 500);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const resetState = useCallback(() => {
-    setState(DEFAULT_DRAWER_STATE);
   }, []);
 
   const showDrawer = useCallback((args: IDrawerArgs) => {
@@ -44,18 +42,22 @@ export const DrawerProvider: FC = ({ children }) => {
   }, []);
 
   return (
-    <DrawerContext.Provider value={{ showDrawer }}>
+    <DrawerContext.Provider value={{ showDrawer, hideDrawer }}>
       {children}
       <div className={classNames(root, { 'is-visible': isVisible })}>
-        <div className="header">
-          <Typography variant="label" bold={true}>
-            {title}
-          </Typography>
-          <Button variant="primary-text" onClick={hideDrawer}>
-            Cancel
-          </Button>
-        </div>
-        <div className="body">{body}</div>
+        {body && title && (
+          <>
+            <div className="header">
+              <Typography variant="label" bold={true}>
+                {title}
+              </Typography>
+              <Button variant="primary-text" onClick={hideDrawer}>
+                Cancel
+              </Button>
+            </div>
+            <div className="body">{body}</div>
+          </>
+        )}
       </div>
     </DrawerContext.Provider>
   );
