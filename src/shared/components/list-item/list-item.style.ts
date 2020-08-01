@@ -9,23 +9,6 @@ export const useStyles = createUseStyles(
   }: ITheme) => ({
     root: {
       padding: `${PADDING_3} ${PADDING_0}`,
-      '&.single-line': {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      },
-      '&:not(.single-line)': {
-        '& > *': {
-          '& > *': {
-            '&:first-child': {
-              marginRight: MARGIN_1,
-            },
-          },
-          '&:not(:last-child)': {
-            paddingBottom: PADDING_1,
-          },
-        },
-      },
       '&:first-of-type': {
         paddingTop: PADDING_0,
       },
@@ -34,6 +17,16 @@ export const useStyles = createUseStyles(
       },
       '&:not(:last-of-type)': {
         borderBottom: `1px solid ${BORDER_COLOR}`,
+      },
+      '& > *': {
+        '& > *': {
+          '&:first-child': {
+            marginRight: MARGIN_1,
+          },
+        },
+        '&:not(:last-child)': {
+          paddingBottom: PADDING_1,
+        },
       },
     },
   }),
