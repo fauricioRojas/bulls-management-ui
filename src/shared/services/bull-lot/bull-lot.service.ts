@@ -56,7 +56,7 @@ class BullLotService implements IBullLotService {
               purchaseDate: 1595991118000,
             },
           ]);
-        }, 3000);
+        }, 2000);
       });
     } catch (error) {
       throw error;

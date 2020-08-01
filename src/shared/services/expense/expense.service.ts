@@ -4,6 +4,7 @@ import { uuidv4 } from '../../utils/helper';
 
 interface IExpenseService {
   createExpense(expense: IExpenseCreate): Promise<IExpense>;
+  getExpenses: () => Promise<IExpense[]>;
 }
 
 class ExpenseService implements IExpenseService {
@@ -12,7 +13,50 @@ class ExpenseService implements IExpenseService {
       return new Promise(resolve => {
         setTimeout(() => {
           resolve({ ...expense, expenseId: uuidv4(), purchaseDate: Date.now() });
-        }, 3000);
+        }, 1000);
+      });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  public getExpenses = async (): Promise<IExpense[]> => {
+    try {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve([
+            {
+              expenseId: uuidv4(),
+              description: 'Expense 1',
+              cost: 1000000,
+              purchaseDate: 1595645518000,
+            },
+            {
+              expenseId: uuidv4(),
+              description: 'Expense 1',
+              cost: 1000000,
+              purchaseDate: 1595731918000,
+            },
+            {
+              expenseId: uuidv4(),
+              description: 'Expense 1',
+              cost: 1000000,
+              purchaseDate: 1595818318000,
+            },
+            {
+              expenseId: uuidv4(),
+              description: 'Expense 1',
+              cost: 1000000,
+              purchaseDate: 1595904718000,
+            },
+            {
+              expenseId: uuidv4(),
+              description: 'Expense 1',
+              cost: 1000000,
+              purchaseDate: 1595991118000,
+            },
+          ]);
+        }, 2000);
       });
     } catch (error) {
       throw error;

@@ -30,10 +30,10 @@ export const BullLotProvider: FC = ({ children }) => {
     }
   };
 
-  const pushBullLot = useCallback((newBullLot: IBullLot) => {
+  const pushBullLot = useCallback((bullLot: IBullLot) => {
     setState(prevState => ({
       ...prevState,
-      bullLots: prevState.bullLots.concat(newBullLot),
+      bullLots: prevState.bullLots.concat(bullLot),
     }));
   }, []);
 

@@ -5,6 +5,9 @@ import { Button } from '../../../../shared/components/button/button';
 import { FormRow } from '../../../../shared/components/form-row/form-row';
 import { Form } from '../../../../shared/components/form/form';
 import { Input } from '../../../../shared/components/input/input';
+import { useDrawer } from '../../../../shared/context/drawer/drawer.context';
+import { useExpense } from '../../../../shared/context/expense/expense.context';
+import { useSnackbar } from '../../../../shared/context/snackbar/snackbar.context';
 import { expenseService } from '../../../../shared/services/expense/expense.service';
 import { useStyles } from './expense-form.style';
 import { expenseFormInitialValues } from './utils/expense-form-initial-values';
@@ -12,15 +15,20 @@ import { expenseFormSchema } from './utils/expense-form.schema';
 
 export const ExpenseForm: FC = () => {
   const { root } = useStyles();
+  const { pushExpense } = useExpense();
+  const { showSnackbar } = useSnackbar();
+  const { hideDrawer } = useDrawer();
   const { handleSubmit, handleChange, values, touched, errors } = useFormik({
     initialValues: expenseFormInitialValues,
     validationSchema: expenseFormSchema,
     onSubmit: async expenseValues => {
       try {
         const newExpense = await expenseService.createExpense(expenseValues);
-        console.log('newExpense:', newExpense);
-      } catch (err) {
-        console.log('err:', err);
+        pushExpense(newExpense);
+        showSnackbar({ type: 'success', body: 'Saved expense' });
+        hideDrawer();
+      } catch {
+        showSnackbar({ type: 'error', body: 'Not saved expense' });
       }
     },
   });

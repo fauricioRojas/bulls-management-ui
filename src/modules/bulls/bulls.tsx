@@ -5,8 +5,8 @@ import { useBullLot } from '../../shared/context/bull-lot/bull-lot.context';
 import { useDrawer } from '../../shared/context/drawer/drawer.context';
 import { useStyles } from './bulls.style';
 import { BullLotForm } from './components/bull-lot-form/bull-lot-form';
-import { BullLots } from './components/bull-lots/bull-lots';
-import { BullsLoading } from './components/bulls-loading/bulls-loading';
+import { BullLotListLoading } from './components/bull-lot-list-loading/bull-lot-list-loading';
+import { BullLotList } from './components/bull-lot-list/bull-lot-list';
 
 export const Bulls: FC = () => {
   const { isLoading, bullLots, getBullLots } = useBullLot();
@@ -28,7 +28,7 @@ export const Bulls: FC = () => {
 
   return (
     <Wrapper className={root} title="Bulls" onClickAdd={showBullLotForm}>
-      {isLoading ? <BullsLoading /> : <BullLots bullLots={bullLots} />}
+      {isLoading ? <BullLotListLoading /> : <BullLotList bullLots={bullLots} />}
     </Wrapper>
   );
 };

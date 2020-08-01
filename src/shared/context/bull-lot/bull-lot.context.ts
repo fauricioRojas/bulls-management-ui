@@ -1,4 +1,5 @@
 import { createContext, useContext } from 'react';
+
 import { IBullLot } from '../../types/bull-lot.interface';
 
 interface IBullLotContext {
