@@ -1,5 +1,6 @@
 import React, { useCallback, FC } from 'react';
 
+import { List } from '../../../../shared/components/list/list';
 import { IBullLot } from '../../../../shared/types/bull-lot.interface';
 import { BullLotItem } from './components/bull-lot-item/bull-lot-item';
 
@@ -13,5 +14,5 @@ export const BullLotList: FC<IBullLotListProps> = ({ bullLots }) => {
     [],
   );
 
-  return <ul>{bullLots.map(renderBullLotItem)}</ul>;
+  return <List>{bullLots.map(renderBullLotItem)}</List>;
 };

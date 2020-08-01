@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { ListItemWrapper } from '../../../../../../shared/components/list-item-wrapper/list-item-wrapper';
+import { ListItem } from '../../../../../../shared/components/list-item/list-item';
 import { Typography } from '../../../../../../shared/components/typography/typography';
 import { IExpense } from '../../../../../../shared/types/expense.interface';
 import { dateFormatter, moneyFormatter } from '../../../../../../shared/utils/helper';
@@ -12,7 +12,7 @@ interface IExpenseItemProps {
 export const ExpenseItem: FC<IExpenseItemProps> = ({
   expense: { description, cost, purchaseDate },
 }) => (
-  <ListItemWrapper>
+  <ListItem>
     <div>
       <Typography variant="label" bold={true}>
         Description:
@@ -31,5 +31,5 @@ export const ExpenseItem: FC<IExpenseItemProps> = ({
       </Typography>
       <Typography variant="label">{dateFormatter(purchaseDate)}</Typography>
     </div>
-  </ListItemWrapper>
+  </ListItem>
 );

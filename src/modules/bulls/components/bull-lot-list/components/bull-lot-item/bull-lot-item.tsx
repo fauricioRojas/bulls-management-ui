@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { ListItemWrapper } from '../../../../../../shared/components/list-item-wrapper/list-item-wrapper';
+import { ListItem } from '../../../../../../shared/components/list-item/list-item';
 import { Typography } from '../../../../../../shared/components/typography/typography';
 import { IBullLot } from '../../../../../../shared/types/bull-lot.interface';
 import { dateFormatter, moneyFormatter } from '../../../../../../shared/utils/helper';
@@ -12,7 +12,7 @@ interface IBullLotItemProps {
 export const BullLotItem: FC<IBullLotItemProps> = ({
   bullLot: { amount, purchasePrice, purchaseDate, salePrice, saleDate },
 }) => (
-  <ListItemWrapper>
+  <ListItem>
     <div>
       <Typography variant="label" bold={true}>
         Bulls amount:
@@ -38,5 +38,5 @@ export const BullLotItem: FC<IBullLotItemProps> = ({
         </Typography>
       </div>
     )}
-  </ListItemWrapper>
+  </ListItem>
 );

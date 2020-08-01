@@ -1,5 +1,6 @@
 import React, { useCallback, FC } from 'react';
 
+import { List } from '../../../../shared/components/list/list';
 import { IExpense } from '../../../../shared/types/expense.interface';
 import { ExpenseItem } from './components/expense-item/expense-item';
 
@@ -13,5 +14,5 @@ export const ExpenseList: FC<IExpenseListProps> = ({ expenses }) => {
     [],
   );
 
-  return <ul>{expenses.map(renderExpenseItem)}</ul>;
+  return <List>{expenses.map(renderExpenseItem)}</List>;
 };

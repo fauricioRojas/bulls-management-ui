@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 
-import { useStyles } from './list-item-wrapper.style';
+import { useStyles } from './list-item.style';
 
-interface IListItemWrapperProps {
+interface IListItemProps {
   singleLine?: boolean;
 }
 
-export const ListItemWrapper: FC<IListItemWrapperProps> = ({ singleLine, children }) => {
+export const ListItem: FC<IListItemProps> = ({ singleLine, children }) => {
   const { root } = useStyles();
 
   return <li className={classNames(root, { 'single-line': singleLine })}>{children}</li>;
