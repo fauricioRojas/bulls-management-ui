@@ -9,6 +9,7 @@ import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
 import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
 import { DrawerProvider } from './shared/context/drawer/drawer.provider';
 import { ExpenseProvider } from './shared/context/expense/expense.provider';
+import { LanguageProvider } from './shared/context/language/language.provider';
 import { SnackbarProvider } from './shared/context/snackbar/snackbar.provider';
 
 ReactDOM.render(
@@ -18,9 +19,11 @@ ReactDOM.render(
         <BullLotProvider>
           <ExpenseProvider>
             <SnackbarProvider>
-              <DrawerProvider>
-                <App />
-              </DrawerProvider>
+              <LanguageProvider>
+                <DrawerProvider>
+                  <App />
+                </DrawerProvider>
+              </LanguageProvider>
             </SnackbarProvider>
           </ExpenseProvider>
         </BullLotProvider>

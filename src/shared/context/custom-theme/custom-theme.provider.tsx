@@ -11,11 +11,12 @@ interface ICustomThemeState {
 }
 
 const THEME_KEY = 'dark-theme';
+const isDarkThemeInStorage = localStorageService.get<boolean>(THEME_KEY);
 
 export const CustomThemeProvider: FC = ({ children }) => {
   const [{ isDarkTheme, theme }, setState] = useState<ICustomThemeState>({
-    isDarkTheme: !!localStorageService.get<boolean>(THEME_KEY),
-    theme: localStorageService.get<boolean>(THEME_KEY) ? DARK_THEME : LIGHT_THEME,
+    isDarkTheme: !!isDarkThemeInStorage,
+    theme: isDarkThemeInStorage ? DARK_THEME : LIGHT_THEME,
   });
 
   const toggleTheme = () => {

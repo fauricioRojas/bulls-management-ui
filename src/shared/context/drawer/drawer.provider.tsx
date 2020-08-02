@@ -3,6 +3,7 @@ import React, { useCallback, useState, FC } from 'react';
 
 import { Button } from '../../components/button/button';
 import { Typography } from '../../components/typography/typography';
+import { useLanguage } from '../language/language.context';
 import { DrawerContext } from './drawer.context';
 import { useStyles } from './drawer.style';
 import { IDrawerArgs } from './interfaces/drawer.interface';
@@ -18,6 +19,7 @@ export const DEFAULT_DRAWER_STATE: IDrawerState = {
 };
 
 export const DrawerProvider: FC = ({ children }) => {
+  const { translate } = useLanguage();
   const { root } = useStyles();
   const [{ isVisible, title, body }, setState] = useState<IDrawerState>(DEFAULT_DRAWER_STATE);
 
@@ -52,7 +54,7 @@ export const DrawerProvider: FC = ({ children }) => {
                 {title}
               </Typography>
               <Button variant="primary-text" onClick={hideDrawer}>
-                Cancel
+                {translate('cancel')}
               </Button>
             </div>
             <div className="body">{body}</div>

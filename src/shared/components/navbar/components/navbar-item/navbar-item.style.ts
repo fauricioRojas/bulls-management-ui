@@ -12,6 +12,7 @@ export const useStyles = createUseStyles(
       textDecoration: 'none',
       color: SECONDARY_TEXT_COLOR,
       transition: 'color .3s ease',
+      flex: 1,
       '&.active': {
         color: PRIMARY_COLOR,
       },

@@ -1,0 +1,32 @@
+import { ILanguageTranslation } from '../interfaces/language.interface';
+
+export const SPANISH: ILanguageTranslation = {
+  es: 'Español',
+  en: 'Inglés',
+  dashboard: 'Tablero',
+  bulls: 'Toros',
+  expenses: 'Gastos',
+  settings: 'Configuración',
+  theme: 'Tema Oscuro',
+  language: 'Lenguaje',
+  bullsAmount: 'Cantidad de toros',
+  purchasePrice: 'Precio de compra',
+  purchaseDate: 'Fecha de compra',
+  bullLotOnFarm: 'Este lote de toros está en la finca',
+  description: 'Descripción',
+  cost: 'Costo',
+  newBullLot: 'Nuevo Lote de Toros',
+  addBullLot: 'Agregar Lote de Toros',
+  newExpense: 'Nuevo Gasto',
+  addExpense: 'Agregar Gasto',
+  cancel: 'Cancelar',
+  savedBullLot: 'Lote de toros guardado',
+  notSavedBullLot: 'Lote de toros no guardado',
+  savedExpense: 'Gasto guardado',
+  notSavedExpense: 'Gasto no guardado',
+  // Form error messages
+  required: 'Requerido',
+  minNumeric: 'Este campo debe ser mayor o igual que 1',
+  tooShort: 'Muy corto',
+  tooLong: 'Muy largo',
+};

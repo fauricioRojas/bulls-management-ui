@@ -3,10 +3,7 @@ import { createUseStyles } from 'react-jss';
 import { ITheme } from '../../style/theming/theme';
 
 export const useStyles = createUseStyles(
-  ({
-    GUTTERS: { MARGIN_1, PADDING_0, PADDING_1, PADDING_3 },
-    COLORS: { BORDER_COLOR },
-  }: ITheme) => ({
+  ({ GUTTERS: { PADDING_0, PADDING_1, PADDING_3 }, COLORS: { BORDER_COLOR } }: ITheme) => ({
     root: {
       padding: `${PADDING_3} ${PADDING_0}`,
       '&:first-of-type': {
@@ -21,7 +18,7 @@ export const useStyles = createUseStyles(
       '& > *': {
         '& > *': {
           '&:first-child': {
-            marginRight: MARGIN_1,
+            paddingRight: PADDING_1,
           },
         },
         '&:not(:last-child)': {
