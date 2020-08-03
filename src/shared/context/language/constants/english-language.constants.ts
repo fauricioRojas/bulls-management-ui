@@ -9,7 +9,7 @@ export const ENGLISH: ILanguageTranslation = {
   settings: 'Settings',
   theme: 'Dark Theme',
   language: 'Language',
-  bullsAmount: 'Bull amount',
+  bullsAmount: 'Bulls amount',
   purchasePrice: 'Purchase price',
   purchaseDate: 'Purchase date',
   bullLotOnFarm: 'This bull lot is on farm',

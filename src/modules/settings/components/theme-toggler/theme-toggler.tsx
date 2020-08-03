@@ -7,12 +7,12 @@ import { useCustomTheme } from '../../../../shared/context/custom-theme/custom-t
 import { useLanguage } from '../../../../shared/context/language/language.context';
 
 export const ThemeToggler = () => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { isDarkTheme, toggleTheme } = useCustomTheme();
 
   return (
     <Row>
-      <Typography variant="label">{translate('theme')}</Typography>
+      <Typography variant="label">{languageTranslation.theme}</Typography>
       <Switch checked={isDarkTheme} round={true} onChange={toggleTheme} />
     </Row>
   );

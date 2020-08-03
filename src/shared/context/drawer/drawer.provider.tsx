@@ -19,7 +19,7 @@ export const DEFAULT_DRAWER_STATE: IDrawerState = {
 };
 
 export const DrawerProvider: FC = ({ children }) => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { root } = useStyles();
   const [{ isVisible, title, body }, setState] = useState<IDrawerState>(DEFAULT_DRAWER_STATE);
 
@@ -54,7 +54,7 @@ export const DrawerProvider: FC = ({ children }) => {
                 {title}
               </Typography>
               <Button variant="primary-text" onClick={hideDrawer}>
-                {translate('cancel')}
+                {languageTranslation.cancel}
               </Button>
             </div>
             <div className="body">{body}</div>

@@ -13,32 +13,32 @@ interface IBullLotItemProps {
 export const BullLotItem: FC<IBullLotItemProps> = ({
   bullLot: { amount, purchasePrice, purchaseDate, salePrice, saleDate },
 }) => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
 
   return (
     <ListItem>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('bullsAmount')}:
+          {languageTranslation.bullsAmount}:
         </Typography>
         <Typography variant="label">{amount}</Typography>
       </div>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('purchasePrice')}:
+          {languageTranslation.purchasePrice}:
         </Typography>
         <Typography variant="label">{moneyFormatter(purchasePrice)}</Typography>
       </div>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('purchaseDate')}:
+          {languageTranslation.purchaseDate}:
         </Typography>
         <Typography variant="label">{dateFormatter(purchaseDate)}</Typography>
       </div>
       {!salePrice && !saleDate && (
         <div>
           <Typography variant="label" italic={true}>
-            {translate('bullLotOnFarm')}
+            {languageTranslation.bullLotOnFarm}
           </Typography>
         </div>
       )}

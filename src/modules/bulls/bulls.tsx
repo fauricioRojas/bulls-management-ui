@@ -10,7 +10,7 @@ import { BullLotListLoading } from './components/bull-lot-list-loading/bull-lot-
 import { BullLotList } from './components/bull-lot-list/bull-lot-list';
 
 export const Bulls: FC = () => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { isLoading, bullLots, getBullLots } = useBullLot();
   const { showDrawer } = useDrawer();
   const { root } = useStyles();
@@ -22,14 +22,14 @@ export const Bulls: FC = () => {
 
   const showBullLotForm = useCallback(() => {
     showDrawer({
-      title: translate('newBullLot'),
+      title: languageTranslation.newBullLot,
       body: <BullLotForm />,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <Wrapper className={root} title={translate('bulls')} onClickAdd={showBullLotForm}>
+    <Wrapper className={root} title={languageTranslation.bulls} onClickAdd={showBullLotForm}>
       {isLoading ? <BullLotListLoading /> : <BullLotList bullLots={bullLots} />}
     </Wrapper>
   );

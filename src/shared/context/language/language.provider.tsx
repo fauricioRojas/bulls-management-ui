@@ -32,13 +32,10 @@ export const LanguageProvider: FC = ({ children }) => {
     localStorageService.set(LANGUAGE_KEY, newLanguage);
   }, []);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const translate = useCallback((key: keyof ILanguageTranslation) => languageTranslation[key], [
-    language,
-  ]);
-
   return (
-    <LanguageContext.Provider value={{ language, languageOptions, changeLanguage, translate }}>
+    <LanguageContext.Provider
+      value={{ language, languageOptions, languageTranslation, changeLanguage }}
+    >
       {children}
     </LanguageContext.Provider>
   );

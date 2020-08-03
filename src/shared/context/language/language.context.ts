@@ -6,15 +6,15 @@ import { ILanguageTranslation, LanguageType } from './interfaces/language.interf
 interface ILanguageContext {
   language: LanguageType;
   languageOptions: ISelectOption[];
+  languageTranslation: ILanguageTranslation;
   changeLanguage: (language: LanguageType) => void;
-  translate: (key: keyof ILanguageTranslation) => string;
 }
 
 export const LanguageContext = createContext<ILanguageContext>({
   language: 'es',
   languageOptions: [],
+  languageTranslation: {} as ILanguageTranslation,
   changeLanguage: () => undefined,
-  translate: () => '',
 });
 
 export const useLanguage = () => useContext(LanguageContext);

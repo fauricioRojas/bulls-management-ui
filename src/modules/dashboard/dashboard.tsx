@@ -5,8 +5,8 @@ import { useLanguage } from '../../shared/context/language/language.context';
 import { useStyles } from './dashboard.style';
 
 export const Dashboard: FC = () => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { root } = useStyles();
 
-  return <Wrapper className={root} title={translate('dashboard')} />;
+  return <Wrapper className={root} title={languageTranslation.dashboard} />;
 };

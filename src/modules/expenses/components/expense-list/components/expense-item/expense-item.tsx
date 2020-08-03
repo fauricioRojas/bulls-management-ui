@@ -13,25 +13,25 @@ interface IExpenseItemProps {
 export const ExpenseItem: FC<IExpenseItemProps> = ({
   expense: { description, cost, purchaseDate },
 }) => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
 
   return (
     <ListItem>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('description')}:
+          {languageTranslation.description}:
         </Typography>
         <Typography variant="label">{description}</Typography>
       </div>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('cost')}:
+          {languageTranslation.cost}:
         </Typography>
         <Typography variant="label">{moneyFormatter(cost)}</Typography>
       </div>
       <div>
         <Typography variant="label" bold={true}>
-          {translate('purchaseDate')}:
+          {languageTranslation.purchaseDate}:
         </Typography>
         <Typography variant="label">{dateFormatter(purchaseDate)}</Typography>
       </div>

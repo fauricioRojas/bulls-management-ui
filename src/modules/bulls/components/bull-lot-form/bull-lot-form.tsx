@@ -16,7 +16,7 @@ import { bullLotFormInitialValues } from './utils/bull-lot-form-initial-values';
 
 export const BullLotForm: FC = () => {
   const { root } = useStyles();
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { bullLotFormSchema } = useBullLotFormSchema();
   const { pushBullLot } = useBullLot();
   const { showSnackbar } = useSnackbar();
@@ -28,21 +28,21 @@ export const BullLotForm: FC = () => {
       try {
         const newBullLot = await bullLotService.createBullLot(bullLotValues);
         pushBullLot(newBullLot);
-        showSnackbar({ type: 'success', body: translate('savedBullLot') });
+        showSnackbar({ type: 'success', body: languageTranslation.savedBullLot });
         hideDrawer();
       } catch {
-        showSnackbar({ type: 'error', body: translate('notSavedBullLot') });
+        showSnackbar({ type: 'error', body: languageTranslation.notSavedBullLot });
       }
     },
   });
 
   return (
     <Form className={root} onSubmit={handleSubmit}>
-      <FormRow label={translate('bullsAmount')} align="vertical" required={true}>
+      <FormRow label={languageTranslation.bullsAmount} align="vertical" required={true}>
         <Input
           id="amount"
           name="amount"
-          placeholder={translate('bullsAmount')}
+          placeholder={languageTranslation.bullsAmount}
           type="text"
           inputMode="numeric"
           value={values.amount}
@@ -51,11 +51,11 @@ export const BullLotForm: FC = () => {
           errorMessage={errors.amount}
         />
       </FormRow>
-      <FormRow label={translate('purchasePrice')} align="vertical" required={true}>
+      <FormRow label={languageTranslation.purchasePrice} align="vertical" required={true}>
         <Input
           id="purchasePrice"
           name="purchasePrice"
-          placeholder={translate('purchasePrice')}
+          placeholder={languageTranslation.purchasePrice}
           type="text"
           inputMode="numeric"
           value={values.purchasePrice}
@@ -66,7 +66,7 @@ export const BullLotForm: FC = () => {
       </FormRow>
       <div className="buttons-wrapper">
         <Button fullWidth={true} variant="primary" type="submit" size="large">
-          {translate('addBullLot')}
+          {languageTranslation.addBullLot}
         </Button>
       </div>
     </Form>

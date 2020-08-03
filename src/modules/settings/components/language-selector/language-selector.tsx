@@ -6,7 +6,7 @@ import { Typography } from '../../../../shared/components/typography/typography'
 import { useLanguage } from '../../../../shared/context/language/language.context';
 
 export const LanguageSelector = () => {
-  const { language, languageOptions, translate, changeLanguage } = useLanguage();
+  const { language, languageOptions, languageTranslation, changeLanguage } = useLanguage();
 
   const handleChangeLanguage = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     changeLanguage(event.target.value as any);
@@ -15,7 +15,7 @@ export const LanguageSelector = () => {
 
   return (
     <Row>
-      <Typography variant="label">{translate('language')}</Typography>
+      <Typography variant="label">{languageTranslation.language}</Typography>
       <Select value={language} options={languageOptions} onChange={handleChangeLanguage} />
     </Row>
   );

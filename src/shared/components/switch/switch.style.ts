@@ -33,7 +33,7 @@ export const useStyles = createUseStyles(
         },
         '&:focus': {
           '& + .slider': {
-            boxShadow: '0 0 1px #2196F3',
+            boxShadow: `0 0 1px ${PRIMARY_COLOR}`,
           },
         },
       },

@@ -7,11 +7,11 @@ import { ThemeToggler } from './components/theme-toggler/theme-toggler';
 import { useStyles } from './settings.style';
 
 export const Settings: FC = () => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { root } = useStyles();
 
   return (
-    <Wrapper className={root} title={translate('settings')}>
+    <Wrapper className={root} title={languageTranslation.settings}>
       <ThemeToggler />
       <LanguageSelector />
     </Wrapper>

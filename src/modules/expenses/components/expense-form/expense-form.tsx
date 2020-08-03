@@ -16,7 +16,7 @@ import { expenseFormInitialValues } from './utils/expense-form-initial-values';
 
 export const ExpenseForm: FC = () => {
   const { root } = useStyles();
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { pushExpense } = useExpense();
   const { showSnackbar } = useSnackbar();
   const { hideDrawer } = useDrawer();
@@ -28,21 +28,21 @@ export const ExpenseForm: FC = () => {
       try {
         const newExpense = await expenseService.createExpense(expenseValues);
         pushExpense(newExpense);
-        showSnackbar({ type: 'success', body: translate('savedExpense') });
+        showSnackbar({ type: 'success', body: languageTranslation.savedExpense });
         hideDrawer();
       } catch {
-        showSnackbar({ type: 'error', body: translate('notSavedExpense') });
+        showSnackbar({ type: 'error', body: languageTranslation.notSavedExpense });
       }
     },
   });
 
   return (
     <Form className={root} onSubmit={handleSubmit}>
-      <FormRow label={translate('description')} align="vertical" required={true}>
+      <FormRow label={languageTranslation.description} align="vertical" required={true}>
         <Input
           id="description"
           name="description"
-          placeholder={translate('description')}
+          placeholder={languageTranslation.description}
           type="text"
           value={values.description}
           onChange={handleChange}
@@ -50,11 +50,11 @@ export const ExpenseForm: FC = () => {
           errorMessage={errors.description}
         />
       </FormRow>
-      <FormRow label={translate('cost')} align="vertical" required={true}>
+      <FormRow label={languageTranslation.cost} align="vertical" required={true}>
         <Input
           id="cost"
           name="cost"
-          placeholder={translate('cost')}
+          placeholder={languageTranslation.cost}
           type="text"
           inputMode="numeric"
           value={values.cost}
@@ -65,7 +65,7 @@ export const ExpenseForm: FC = () => {
       </FormRow>
       <div className="buttons-wrapper">
         <Button fullWidth={true} variant="primary" type="submit" size="large">
-          {translate('addExpense')}
+          {languageTranslation.addExpense}
         </Button>
       </div>
     </Form>

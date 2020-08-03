@@ -10,7 +10,7 @@ import { ExpenseList } from './components/expense-list/expense-list';
 import { useStyles } from './expenses.style';
 
 export const Expenses: FC = () => {
-  const { translate } = useLanguage();
+  const { languageTranslation } = useLanguage();
   const { expenses, isLoading, getExpenses } = useExpense();
   const { showDrawer } = useDrawer();
   const { root } = useStyles();
@@ -22,14 +22,14 @@ export const Expenses: FC = () => {
 
   const showExpenseForm = useCallback(() => {
     showDrawer({
-      title: translate('newExpense'),
+      title: languageTranslation.newExpense,
       body: <ExpenseForm />,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <Wrapper className={root} title={translate('expenses')} onClickAdd={showExpenseForm}>
+    <Wrapper className={root} title={languageTranslation.expenses} onClickAdd={showExpenseForm}>
       {isLoading ? <ExpenseListLoading /> : <ExpenseList expenses={expenses} />}
     </Wrapper>
   );
