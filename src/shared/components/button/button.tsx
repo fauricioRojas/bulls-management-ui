@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { useStyles } from './button.style';
 
 export interface IButtonProps {
-  variant: 'primary' | 'secondary' | 'primary-text';
+  variant: 'primary' | 'secondary' | 'primary-text' | 'error-text';
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   size?: 'small' | 'large';

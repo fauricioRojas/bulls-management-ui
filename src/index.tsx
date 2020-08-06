@@ -10,6 +10,7 @@ import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.
 import { DrawerProvider } from './shared/context/drawer/drawer.provider';
 import { ExpenseProvider } from './shared/context/expense/expense.provider';
 import { LanguageProvider } from './shared/context/language/language.provider';
+import { ModalProvider } from './shared/context/modal/modal.provider';
 import { SnackbarProvider } from './shared/context/snackbar/snackbar.provider';
 
 ReactDOM.render(
@@ -20,9 +21,11 @@ ReactDOM.render(
           <ExpenseProvider>
             <SnackbarProvider>
               <LanguageProvider>
-                <DrawerProvider>
-                  <App />
-                </DrawerProvider>
+                <ModalProvider>
+                  <DrawerProvider>
+                    <App />
+                  </DrawerProvider>
+                </ModalProvider>
               </LanguageProvider>
             </SnackbarProvider>
           </ExpenseProvider>

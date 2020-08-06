@@ -7,3 +7,4 @@ export const CHECK_CIRCLE = 'fa fa-check-circle';
 export const TIMES_CIRCLE = 'fa fa-times-circle';
 export const EXCLAMATION_CIRCLE = 'fa fa-exclamation-circle';
 export const INFO_CIRCLE = 'fa fa-info-circle';
+export const CHEVRON_DOWN = 'fa fa-chevron-down';

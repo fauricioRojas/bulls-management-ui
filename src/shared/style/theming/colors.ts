@@ -7,6 +7,7 @@ export interface IColors {
   NAVBAR_BACKGROUND_COLOR: string;
   BORDER_COLOR: string;
   INPUT_BACKGROUND_COLOR: string;
+  MODAL_BACKGROUND_COLOR: string;
   SKELETON_COLOR: string;
   SNACKBAR_COLOR: string;
   WHITE_COLOR: string;
@@ -18,6 +19,7 @@ export interface IColors {
 
 const COMMON_COLORS = {
   PRIMARY_COLOR: '#4F48EC',
+  MODAL_BACKGROUND_COLOR: 'rgba(0,0,0,0.5)',
   SUCCESS_COLOR: '#31A24C',
   ERROR_COLOR: '#FC3930',
   WHITE_COLOR: '#FFF',

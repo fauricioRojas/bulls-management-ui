@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, { ChangeEvent, FC } from 'react';
 
+import { CHEVRON_DOWN } from '../../constants/icons.constants';
+import { Icon } from '../icon/icon';
 import { ISelectOption } from './interfaces/select.interface';
 import { useStyles } from './select.style';
 
@@ -15,12 +17,15 @@ export const Select: FC<ISelectProps> = ({ options, fullWidth, ...props }) => {
   const { root } = useStyles();
 
   return (
-    <select className={classNames(root, { 'full-width': fullWidth })} {...props}>
-      {options.map(({ label, value }) => (
-        <option key={label} value={value || label}>
-          {label}
-        </option>
-      ))}
-    </select>
+    <div className={classNames(root, { 'full-width': fullWidth })}>
+      <select {...props}>
+        {options.map(({ label, value }) => (
+          <option key={label} value={value || label}>
+            {label}
+          </option>
+        ))}
+      </select>
+      <Icon iconClass={CHEVRON_DOWN} size="small" />
+    </div>
   );
 };

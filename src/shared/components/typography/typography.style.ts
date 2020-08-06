@@ -21,6 +21,7 @@ export const useStyles = createUseStyles(
       },
       '&.caption': {
         fontSize: '0.7rem',
+        color: PRIMARY_TEXT_COLOR,
       },
       '&.bold': {
         fontWeight: BOLD,
