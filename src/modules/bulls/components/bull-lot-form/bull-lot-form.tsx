@@ -5,10 +5,10 @@ import { Button } from 'shared/components/button/button';
 import { FormRow } from 'shared/components/form-row/form-row';
 import { Form } from 'shared/components/form/form';
 import { Input } from 'shared/components/input/input';
-import { useBullLot } from 'shared/context/bull-lot/bull-lot.context';
-import { useDrawer } from 'shared/context/drawer/drawer.context';
-import { useLanguage } from 'shared/context/language/language.context';
-import { useSnackbar } from 'shared/context/snackbar/snackbar.context';
+import { useBullLots } from 'shared/contexts/bull-lots/bull-lots.context';
+import { useDrawer } from 'shared/contexts/drawer/drawer.context';
+import { useLanguage } from 'shared/contexts/language/language.context';
+import { useSnackbar } from 'shared/contexts/snackbar/snackbar.context';
 import { bullLotService } from 'shared/services/bull-lot/bull-lot.service';
 import { useStyles } from './bull-lot-form.style';
 import { useBullLotFormSchema } from './hooks/use-bull-lot-form-schema';
@@ -18,7 +18,7 @@ export const BullLotForm: FC = () => {
   const { root } = useStyles();
   const { languageTranslation } = useLanguage();
   const { bullLotFormSchema } = useBullLotFormSchema();
-  const { pushBullLot } = useBullLot();
+  const { pushBullLot } = useBullLots();
   const { showSnackbar } = useSnackbar();
   const { hideDrawer } = useDrawer();
   const { handleSubmit, handleChange, values, touched, errors } = useFormik({

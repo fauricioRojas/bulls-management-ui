@@ -2,16 +2,16 @@ import React, { useCallback, useState, FC } from 'react';
 
 import { expenseService } from 'shared/services/expense/expense.service';
 import { IExpense } from 'shared/types/expense.interface';
-import { ExpenseContext } from './expense.context';
+import { ExpensesContext } from './expenses.context';
 
-interface IExpenseState {
+interface IExpensesState {
   isLoading: boolean;
   wasLoaded: boolean;
   expenses: IExpense[];
 }
 
-export const ExpenseProvider: FC = ({ children }) => {
-  const [{ isLoading, wasLoaded, expenses }, setState] = useState<IExpenseState>({
+export const ExpensesProvider: FC = ({ children }) => {
+  const [{ isLoading, wasLoaded, expenses }, setState] = useState<IExpensesState>({
     isLoading: false,
     wasLoaded: false,
     expenses: [],
@@ -38,8 +38,8 @@ export const ExpenseProvider: FC = ({ children }) => {
   }, []);
 
   return (
-    <ExpenseContext.Provider value={{ isLoading, expenses, getExpenses, pushExpense }}>
+    <ExpensesContext.Provider value={{ isLoading, expenses, getExpenses, pushExpense }}>
       {children}
-    </ExpenseContext.Provider>
+    </ExpensesContext.Provider>
   );
 };

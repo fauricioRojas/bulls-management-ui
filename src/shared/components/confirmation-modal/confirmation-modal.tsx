@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useCallback, useState, FC } from 'react';
 
-import { useLanguage } from '../../context/language/language.context';
+import { useLanguage } from '../../contexts/language/language.context';
 import { Button } from '../button/button';
 import { Typography } from '../typography/typography';
 import { useStyles } from './confirmation-modal.style';

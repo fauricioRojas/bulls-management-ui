@@ -3,8 +3,8 @@ import React, { ChangeEvent } from 'react';
 import { Row } from 'shared/components/row/row';
 import { Select } from 'shared/components/select/select';
 import { Typography } from 'shared/components/typography/typography';
-import { LanguageType } from 'shared/context/language/interfaces/language.interface';
-import { useLanguage } from 'shared/context/language/language.context';
+import { LanguageType } from 'shared/contexts/language/interfaces/language.interface';
+import { useLanguage } from 'shared/contexts/language/language.context';
 
 export const LanguageSelector = () => {
   const { language, languageOptions, languageTranslation, changeLanguage } = useLanguage();

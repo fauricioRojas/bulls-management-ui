@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Wrapper } from 'shared/components/wrapper/wrapper';
-import { useLanguage } from 'shared/context/language/language.context';
+import { useLanguage } from 'shared/contexts/language/language.context';
 import { useStyles } from './dashboard.style';
 
 export const Dashboard: FC = () => {

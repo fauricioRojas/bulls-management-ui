@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import * as Yup from 'yup';
 
-import { useLanguage } from 'shared/context/language/language.context';
+import { useLanguage } from 'shared/contexts/language/language.context';
 
 export const useBullLotFormSchema = () => {
   const { language, languageTranslation } = useLanguage();

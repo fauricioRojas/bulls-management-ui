@@ -5,20 +5,20 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { App } from 'modules/app/app';
 import * as serviceWorker from 'serviceWorker';
-import { BullLotProvider } from 'shared/context/bull-lot/bull-lot.provider';
-import { CustomThemeProvider } from 'shared/context/custom-theme/custom-theme.provider';
-import { DrawerProvider } from 'shared/context/drawer/drawer.provider';
-import { ExpenseProvider } from 'shared/context/expense/expense.provider';
-import { LanguageProvider } from 'shared/context/language/language.provider';
-import { ModalProvider } from 'shared/context/modal/modal.provider';
-import { SnackbarProvider } from 'shared/context/snackbar/snackbar.provider';
+import { BullLotsProvider } from 'shared/contexts/bull-lots/bull-lots.provider';
+import { CustomThemeProvider } from 'shared/contexts/custom-theme/custom-theme.provider';
+import { DrawerProvider } from 'shared/contexts/drawer/drawer.provider';
+import { ExpensesProvider } from 'shared/contexts/expenses/expenses.provider';
+import { LanguageProvider } from 'shared/contexts/language/language.provider';
+import { ModalProvider } from 'shared/contexts/modal/modal.provider';
+import { SnackbarProvider } from 'shared/contexts/snackbar/snackbar.provider';
 
 ReactDOM.render(
   <StrictMode>
     <CustomThemeProvider>
       <BrowserRouter>
-        <BullLotProvider>
-          <ExpenseProvider>
+        <BullLotsProvider>
+          <ExpensesProvider>
             <SnackbarProvider>
               <LanguageProvider>
                 <ModalProvider>
@@ -28,8 +28,8 @@ ReactDOM.render(
                 </ModalProvider>
               </LanguageProvider>
             </SnackbarProvider>
-          </ExpenseProvider>
-        </BullLotProvider>
+          </ExpensesProvider>
+        </BullLotsProvider>
       </BrowserRouter>
     </CustomThemeProvider>
   </StrictMode>,

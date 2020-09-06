@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { ListItem } from 'shared/components/list-item/list-item';
 import { Typography } from 'shared/components/typography/typography';
-import { useLanguage } from 'shared/context/language/language.context';
+import { useLanguage } from 'shared/contexts/language/language.context';
 import { IBullLot } from 'shared/types/bull-lot.interface';
 import { dateFormatter, moneyFormatter } from 'shared/utils/helper';
 

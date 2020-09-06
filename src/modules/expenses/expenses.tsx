@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, FC } from 'react';
 
 import { Wrapper } from 'shared/components/wrapper/wrapper';
-import { useDrawer } from 'shared/context/drawer/drawer.context';
-import { useExpense } from 'shared/context/expense/expense.context';
-import { useLanguage } from 'shared/context/language/language.context';
+import { useDrawer } from 'shared/contexts/drawer/drawer.context';
+import { useExpenses } from 'shared/contexts/expenses/expenses.context';
+import { useLanguage } from 'shared/contexts/language/language.context';
 import { ExpenseForm } from './components/expense-form/expense-form';
 import { ExpenseListLoading } from './components/expense-list-loading/expense-list-loading';
 import { ExpenseList } from './components/expense-list/expense-list';
@@ -11,7 +11,7 @@ import { useStyles } from './expenses.style';
 
 export const Expenses: FC = () => {
   const { languageTranslation } = useLanguage();
-  const { expenses, isLoading, getExpenses } = useExpense();
+  const { expenses, isLoading, getExpenses } = useExpenses();
   const { showDrawer } = useDrawer();
   const { root } = useStyles();
 
