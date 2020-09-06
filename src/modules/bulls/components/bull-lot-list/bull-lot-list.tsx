@@ -1,7 +1,7 @@
 import React, { useCallback, FC } from 'react';
 
-import { List } from '../../../../shared/components/list/list';
-import { IBullLot } from '../../../../shared/types/bull-lot.interface';
+import { List } from 'shared/components/list/list';
+import { IBullLot } from 'shared/types/bull-lot.interface';
 import { BullLotItem } from './components/bull-lot-item/bull-lot-item';
 
 interface IBullLotListProps {

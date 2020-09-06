@@ -1,15 +1,15 @@
 import { useFormik } from 'formik';
 import React, { FC } from 'react';
 
-import { Button } from '../../../../shared/components/button/button';
-import { FormRow } from '../../../../shared/components/form-row/form-row';
-import { Form } from '../../../../shared/components/form/form';
-import { Input } from '../../../../shared/components/input/input';
-import { useBullLot } from '../../../../shared/context/bull-lot/bull-lot.context';
-import { useDrawer } from '../../../../shared/context/drawer/drawer.context';
-import { useLanguage } from '../../../../shared/context/language/language.context';
-import { useSnackbar } from '../../../../shared/context/snackbar/snackbar.context';
-import { bullLotService } from '../../../../shared/services/bull-lot/bull-lot.service';
+import { Button } from 'shared/components/button/button';
+import { FormRow } from 'shared/components/form-row/form-row';
+import { Form } from 'shared/components/form/form';
+import { Input } from 'shared/components/input/input';
+import { useBullLot } from 'shared/context/bull-lot/bull-lot.context';
+import { useDrawer } from 'shared/context/drawer/drawer.context';
+import { useLanguage } from 'shared/context/language/language.context';
+import { useSnackbar } from 'shared/context/snackbar/snackbar.context';
+import { bullLotService } from 'shared/services/bull-lot/bull-lot.service';
 import { useStyles } from './bull-lot-form.style';
 import { useBullLotFormSchema } from './hooks/use-bull-lot-form-schema';
 import { bullLotFormInitialValues } from './utils/bull-lot-form-initial-values';

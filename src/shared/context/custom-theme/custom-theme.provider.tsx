@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { ThemeProvider } from 'react-jss';
 
-import { useLocalStorage } from '../../hooks/use-local-storage/use-local-storage';
-import { DARK_THEME, LIGHT_THEME } from '../../style/theming/theme';
+import { useLocalStorage } from 'shared/hooks/use-local-storage/use-local-storage';
+import { DARK_THEME, LIGHT_THEME } from 'shared/style/theming/theme';
 import { CustomThemeContext } from './custom-theme.context';
 
 export const CustomThemeProvider: FC = ({ children }) => {

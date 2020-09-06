@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 
-import { ListItem } from '../../../../../../shared/components/list-item/list-item';
-import { Typography } from '../../../../../../shared/components/typography/typography';
-import { useLanguage } from '../../../../../../shared/context/language/language.context';
-import { IExpense } from '../../../../../../shared/types/expense.interface';
-import { dateFormatter, moneyFormatter } from '../../../../../../shared/utils/helper';
+import { ListItem } from 'shared/components/list-item/list-item';
+import { Typography } from 'shared/components/typography/typography';
+import { useLanguage } from 'shared/context/language/language.context';
+import { IExpense } from 'shared/types/expense.interface';
+import { dateFormatter, moneyFormatter } from 'shared/utils/helper';
 
 interface IExpenseItemProps {
   expense: IExpense;

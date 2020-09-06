@@ -1,4 +1,4 @@
-import { IExpenseCreate } from '../../../../../shared/types/expense-create.interface';
+import { IExpenseCreate } from 'shared/types/expense-create.interface';
 
 export const expenseFormInitialValues: IExpenseCreate = {
   description: '',

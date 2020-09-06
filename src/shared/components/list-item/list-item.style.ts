@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-import { ITheme } from '../../style/theming/theme';
+import { ITheme } from 'shared/style/theming/theme';
 
 export const useStyles = createUseStyles(
   ({ GUTTERS: { PADDING_0, PADDING_1, PADDING_3 }, COLORS: { BORDER_COLOR } }: ITheme) => ({

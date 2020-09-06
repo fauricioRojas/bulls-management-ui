@@ -1,7 +1,7 @@
 import React, { useCallback, useState, FC } from 'react';
 
-import { expenseService } from '../../services/expense/expense.service';
-import { IExpense } from '../../types/expense.interface';
+import { expenseService } from 'shared/services/expense/expense.service';
+import { IExpense } from 'shared/types/expense.interface';
 import { ExpenseContext } from './expense.context';
 
 interface IExpenseState {

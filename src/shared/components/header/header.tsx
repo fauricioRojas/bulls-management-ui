@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useCallback, useEffect, useState, FC } from 'react';
 
-import { PLUS } from '../../constants/icons.constants';
+import { PLUS } from 'shared/constants/icons.constants';
 import { Icon } from '../icon/icon';
 import { Typography } from '../typography/typography';
 import { useStyles } from './header.style';

@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-import { IBullLot } from '../../types/bull-lot.interface';
+import { IBullLot } from 'shared/types/bull-lot.interface';
 
 interface IBullLotContext {
   isLoading: boolean;

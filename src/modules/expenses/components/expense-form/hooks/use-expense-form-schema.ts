@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import * as Yup from 'yup';
 
-import { useLanguage } from '../../../../../shared/context/language/language.context';
+import { useLanguage } from 'shared/context/language/language.context';
 
 export const useExpenseFormSchema = () => {
   const { language, languageTranslation } = useLanguage();

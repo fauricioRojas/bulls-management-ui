@@ -1,15 +1,15 @@
 import { useFormik } from 'formik';
 import React, { FC } from 'react';
 
-import { Button } from '../../../../shared/components/button/button';
-import { FormRow } from '../../../../shared/components/form-row/form-row';
-import { Form } from '../../../../shared/components/form/form';
-import { Input } from '../../../../shared/components/input/input';
-import { useDrawer } from '../../../../shared/context/drawer/drawer.context';
-import { useExpense } from '../../../../shared/context/expense/expense.context';
-import { useLanguage } from '../../../../shared/context/language/language.context';
-import { useSnackbar } from '../../../../shared/context/snackbar/snackbar.context';
-import { expenseService } from '../../../../shared/services/expense/expense.service';
+import { Button } from 'shared/components/button/button';
+import { FormRow } from 'shared/components/form-row/form-row';
+import { Form } from 'shared/components/form/form';
+import { Input } from 'shared/components/input/input';
+import { useDrawer } from 'shared/context/drawer/drawer.context';
+import { useExpense } from 'shared/context/expense/expense.context';
+import { useLanguage } from 'shared/context/language/language.context';
+import { useSnackbar } from 'shared/context/snackbar/snackbar.context';
+import { expenseService } from 'shared/services/expense/expense.service';
 import { useStyles } from './expense-form.style';
 import { useExpenseFormSchema } from './hooks/use-expense-form-schema';
 import { expenseFormInitialValues } from './utils/expense-form-initial-values';

@@ -1,7 +1,7 @@
 import React, { useCallback, FC } from 'react';
 
-import { List } from '../../../../shared/components/list/list';
-import { IExpense } from '../../../../shared/types/expense.interface';
+import { List } from 'shared/components/list/list';
+import { IExpense } from 'shared/types/expense.interface';
 import { ExpenseItem } from './components/expense-item/expense-item';
 
 interface IExpenseListProps {

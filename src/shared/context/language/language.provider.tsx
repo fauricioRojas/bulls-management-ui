@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { useLocalStorage } from '../../hooks/use-local-storage/use-local-storage';
+import { useLocalStorage } from 'shared/hooks/use-local-storage/use-local-storage';
 import { LANGUAGES } from './constants/languages.constants';
 import { LanguageType } from './interfaces/language.interface';
 import { LanguageContext } from './language.context';

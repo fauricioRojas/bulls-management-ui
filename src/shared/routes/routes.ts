@@ -1,9 +1,9 @@
 import { ComponentType } from 'react';
 
-import { Bulls } from '../../modules/bulls/bulls';
-import { Dashboard } from '../../modules/dashboard/dashboard';
-import { Expenses } from '../../modules/expenses/expenses';
-import { Settings } from '../../modules/settings/settings';
+import { Bulls } from 'modules/bulls/bulls';
+import { Dashboard } from 'modules/dashboard/dashboard';
+import { Expenses } from 'modules/expenses/expenses';
+import { Settings } from 'modules/settings/settings';
 import { BASE_ROUTES } from './routes.constants';
 
 export interface IRoute {

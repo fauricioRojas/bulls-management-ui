@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-import { IExpense } from '../../types/expense.interface';
+import { IExpense } from 'shared/types/expense.interface';
 
 interface IExpenseContext {
   isLoading: boolean;

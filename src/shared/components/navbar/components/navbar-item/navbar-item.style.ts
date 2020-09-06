@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-import { ITheme } from '../../../../style/theming/theme';
+import { ITheme } from 'shared/style/theming/theme';
 
 export const useStyles = createUseStyles(
   ({ GUTTERS: { SPACING_1 }, COLORS: { PRIMARY_COLOR, SECONDARY_TEXT_COLOR } }: ITheme) => ({

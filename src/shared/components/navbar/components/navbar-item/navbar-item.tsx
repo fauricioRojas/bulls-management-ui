@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import React, { FC } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
-import { Icon } from '../../../icon/icon';
-import { Typography } from '../../../typography/typography';
+import { Icon } from 'shared/components/icon/icon';
+import { Typography } from 'shared/components/typography/typography';
 import { INavbarItem } from './interfaces/navbar-item.interface';
 import { useStyles } from './navbar-item.style';
 

@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, FC } from 'react';
 
-import { Wrapper } from '../../shared/components/wrapper/wrapper';
-import { useDrawer } from '../../shared/context/drawer/drawer.context';
-import { useExpense } from '../../shared/context/expense/expense.context';
-import { useLanguage } from '../../shared/context/language/language.context';
+import { Wrapper } from 'shared/components/wrapper/wrapper';
+import { useDrawer } from 'shared/context/drawer/drawer.context';
+import { useExpense } from 'shared/context/expense/expense.context';
+import { useLanguage } from 'shared/context/language/language.context';
 import { ExpenseForm } from './components/expense-form/expense-form';
 import { ExpenseListLoading } from './components/expense-list-loading/expense-list-loading';
 import { ExpenseList } from './components/expense-list/expense-list';

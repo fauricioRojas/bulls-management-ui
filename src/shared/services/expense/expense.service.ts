@@ -1,6 +1,6 @@
-import { IExpenseCreate } from '../../types/expense-create.interface';
-import { IExpense } from '../../types/expense.interface';
-import { uuidv4 } from '../../utils/helper';
+import { IExpenseCreate } from 'shared/types/expense-create.interface';
+import { IExpense } from 'shared/types/expense.interface';
+import { uuidv4 } from 'shared/utils/helper';
 
 interface IExpenseService {
   createExpense(expense: IExpenseCreate): Promise<IExpense>;

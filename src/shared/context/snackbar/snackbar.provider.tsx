@@ -1,6 +1,6 @@
 import React, { useCallback, useState, FC, ReactNode } from 'react';
 
-import { Icon } from '../../components/icon/icon';
+import { Icon } from 'shared/components/icon/icon';
 import { DEFAULT_SNACKBAR_DURATION, SNACKBAR_ICON_MAP } from './constants/snackbar.contants';
 import { ISnackbarArgs, SnackbarType } from './interfaces/snackbar.interface';
 import { SnackbarContext } from './snackbar.context';

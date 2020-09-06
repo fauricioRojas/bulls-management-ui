@@ -3,7 +3,7 @@ import {
   EXCLAMATION_CIRCLE,
   INFO_CIRCLE,
   TIMES_CIRCLE,
-} from '../../../constants/icons.constants';
+} from 'shared/constants/icons.constants';
 import { SnackbarType } from '../interfaces/snackbar.interface';
 
 export const DEFAULT_SNACKBAR_DURATION = 3000;

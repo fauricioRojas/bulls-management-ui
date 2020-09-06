@@ -1,7 +1,7 @@
 import React, { useCallback, useState, FC } from 'react';
 
-import { ConfirmationModal } from '../../components/confirmation-modal/confirmation-modal';
-import { Modal } from '../../components/modal/modal';
+import { ConfirmationModal } from 'shared/components/confirmation-modal/confirmation-modal';
+import { Modal } from 'shared/components/modal/modal';
 import { IConfirmationModal, IModal } from './interfaces/modal.interface';
 import { ModalContext } from './modal.context';
 

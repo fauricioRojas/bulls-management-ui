@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { ChangeEvent, FC } from 'react';
 
-import { CHEVRON_DOWN } from '../../constants/icons.constants';
+import { CHEVRON_DOWN } from 'shared/constants/icons.constants';
 import { Icon } from '../icon/icon';
 import { ISelectOption } from './interfaces/select.interface';
 import { useStyles } from './select.style';

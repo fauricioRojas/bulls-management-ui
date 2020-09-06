@@ -1,7 +1,7 @@
 import React, { useCallback, useState, FC } from 'react';
 
-import { bullLotService } from '../../services/bull-lot/bull-lot.service';
-import { IBullLot } from '../../types/bull-lot.interface';
+import { bullLotService } from 'shared/services/bull-lot/bull-lot.service';
+import { IBullLot } from 'shared/types/bull-lot.interface';
 import { BullLotContext } from './bull-lot.context';
 
 interface IBullLotState {

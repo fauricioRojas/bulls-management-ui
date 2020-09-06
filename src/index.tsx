@@ -3,15 +3,15 @@ import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import { App } from './modules/app/app';
-import * as serviceWorker from './serviceWorker';
-import { BullLotProvider } from './shared/context/bull-lot/bull-lot.provider';
-import { CustomThemeProvider } from './shared/context/custom-theme/custom-theme.provider';
-import { DrawerProvider } from './shared/context/drawer/drawer.provider';
-import { ExpenseProvider } from './shared/context/expense/expense.provider';
-import { LanguageProvider } from './shared/context/language/language.provider';
-import { ModalProvider } from './shared/context/modal/modal.provider';
-import { SnackbarProvider } from './shared/context/snackbar/snackbar.provider';
+import { App } from 'modules/app/app';
+import * as serviceWorker from 'serviceWorker';
+import { BullLotProvider } from 'shared/context/bull-lot/bull-lot.provider';
+import { CustomThemeProvider } from 'shared/context/custom-theme/custom-theme.provider';
+import { DrawerProvider } from 'shared/context/drawer/drawer.provider';
+import { ExpenseProvider } from 'shared/context/expense/expense.provider';
+import { LanguageProvider } from 'shared/context/language/language.provider';
+import { ModalProvider } from 'shared/context/modal/modal.provider';
+import { SnackbarProvider } from 'shared/context/snackbar/snackbar.provider';
 
 ReactDOM.render(
   <StrictMode>

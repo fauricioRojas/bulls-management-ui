@@ -1,6 +1,6 @@
-import { IBullLotCreate } from '../../types/bull-lot-create.interface';
-import { IBullLot } from '../../types/bull-lot.interface';
-import { uuidv4 } from '../../utils/helper';
+import { IBullLotCreate } from 'shared/types/bull-lot-create.interface';
+import { IBullLot } from 'shared/types/bull-lot.interface';
+import { uuidv4 } from 'shared/utils/helper';
 
 interface IBullLotService {
   createBullLot(bullLot: IBullLotCreate): Promise<IBullLot>;

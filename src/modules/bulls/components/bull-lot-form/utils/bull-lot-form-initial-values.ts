@@ -1,4 +1,4 @@
-import { IBullLotCreate } from '../../../../../shared/types/bull-lot-create.interface';
+import { IBullLotCreate } from 'shared/types/bull-lot-create.interface';
 
 export const bullLotFormInitialValues: IBullLotCreate = {
   amount: 0,

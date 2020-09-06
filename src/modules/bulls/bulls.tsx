@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, FC } from 'react';
 
-import { Wrapper } from '../../shared/components/wrapper/wrapper';
-import { useBullLot } from '../../shared/context/bull-lot/bull-lot.context';
-import { useDrawer } from '../../shared/context/drawer/drawer.context';
-import { useLanguage } from '../../shared/context/language/language.context';
+import { Wrapper } from 'shared/components/wrapper/wrapper';
+import { useBullLot } from 'shared/context/bull-lot/bull-lot.context';
+import { useDrawer } from 'shared/context/drawer/drawer.context';
+import { useLanguage } from 'shared/context/language/language.context';
 import { useStyles } from './bulls.style';
 import { BullLotForm } from './components/bull-lot-form/bull-lot-form';
 import { BullLotListLoading } from './components/bull-lot-list-loading/bull-lot-list-loading';

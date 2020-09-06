@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Skeleton } from '../../../../shared/components/skeleton/skeleton';
+import { Skeleton } from 'shared/components/skeleton/skeleton';
 
 export const ExpenseListLoading = () => (
   <section>

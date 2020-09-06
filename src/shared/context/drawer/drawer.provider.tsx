@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, { useCallback, useState, FC } from 'react';
 
-import { Button } from '../../components/button/button';
-import { Typography } from '../../components/typography/typography';
+import { Button } from 'shared/components/button/button';
+import { Typography } from 'shared/components/typography/typography';
 import { useLanguage } from '../language/language.context';
 import { DrawerContext } from './drawer.context';
 import { useStyles } from './drawer.style';

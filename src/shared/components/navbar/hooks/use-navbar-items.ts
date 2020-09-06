@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import { COGS, DASHBOARD, DOLLAR, SHOPPING_BASKET } from '../../../constants/icons.constants';
-import { useLanguage } from '../../../context/language/language.context';
-import { BASE_ROUTES } from '../../../routes/routes.constants';
+import { COGS, DASHBOARD, DOLLAR, SHOPPING_BASKET } from 'shared/constants/icons.constants';
+import { useLanguage } from 'shared/context/language/language.context';
+import { BASE_ROUTES } from 'shared/routes/routes.constants';
 
 export const useNavbarItems = () => {
   const { language, languageTranslation } = useLanguage();

@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-import { ISelectOption } from '../../components/select/interfaces/select.interface';
+import { ISelectOption } from 'shared/components/select/interfaces/select.interface';
 import { ILanguageTranslation, LanguageType } from './interfaces/language.interface';
 
 interface ILanguageContext {
