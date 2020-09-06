@@ -1,40 +1,22 @@
-import React, { useCallback, useState, FC } from 'react';
+import React, { FC } from 'react';
 
-import { ISelectOption } from '../../components/select/interfaces/select.interface';
-import { localStorageService } from '../../services/local-storage/local-storage.service';
+import { useLocalStorage } from '../../hooks/use-local-storage/use-local-storage';
 import { LANGUAGES } from './constants/languages.constants';
-import { ILanguageTranslation, LanguageType } from './interfaces/language.interface';
+import { LanguageType } from './interfaces/language.interface';
 import { LanguageContext } from './language.context';
 import { getLanguageOptions } from './language.helper';
 
-interface ILanguageState {
-  language: LanguageType;
-  languageTranslation: ILanguageTranslation;
-  languageOptions: ISelectOption[];
-}
-
-const LANGUAGE_KEY = 'language';
-const languageInStorage = localStorageService.get<LanguageType>(LANGUAGE_KEY) || 'es';
-
 export const LanguageProvider: FC = ({ children }) => {
-  const [{ language, languageOptions, languageTranslation }, setState] = useState<ILanguageState>({
-    language: languageInStorage,
-    languageTranslation: LANGUAGES[languageInStorage],
-    languageOptions: getLanguageOptions(LANGUAGES[languageInStorage]),
-  });
-
-  const changeLanguage = useCallback((newLanguage: LanguageType) => {
-    setState({
-      language: newLanguage,
-      languageTranslation: LANGUAGES[newLanguage],
-      languageOptions: getLanguageOptions(LANGUAGES[newLanguage]),
-    });
-    localStorageService.set(LANGUAGE_KEY, newLanguage);
-  }, []);
+  const [language, setLanguage] = useLocalStorage<LanguageType>('language', 'es');
 
   return (
     <LanguageContext.Provider
-      value={{ language, languageOptions, languageTranslation, changeLanguage }}
+      value={{
+        language,
+        languageOptions: getLanguageOptions(LANGUAGES[language]),
+        languageTranslation: LANGUAGES[language],
+        changeLanguage: setLanguage,
+      }}
     >
       {children}
     </LanguageContext.Provider>

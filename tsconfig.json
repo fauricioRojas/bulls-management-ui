@@ -24,7 +24,8 @@
       {
         "name": "typescript-tslint-plugin"
       }
-    ]
+    ],
+    "baseUrl": "src"
   },
   "include": ["src"],
   "exclude": [
